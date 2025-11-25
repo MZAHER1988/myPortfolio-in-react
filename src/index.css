@@ -1,12 +1,10 @@
 @import "tailwindcss";
 
 
-/* You can add global styles to this file, and also import other style files */
 
 html {
   scroll-behavior: smooth;
 }
-
 
 @keyframes glow {
   0%, 100% {
@@ -15,13 +13,11 @@ html {
   50% {
     filter: drop-shadow(0 0 10px #ea580c);
   }
-
 }
 
 .glow {
   animation: glow 2s ease-in-out infinite;
 }
-
 
 /* 2) Hoppa/bounce på plats (oändlig loop) */
 @keyframes bounceLoop {
@@ -34,24 +30,18 @@ html {
   animation: bounceLoop 2s ease-in-out infinite;
 }
 
-
-
-
-
 /* Exempel på användning av gradient-glow-klassen */
 .gradient-glow {
   background: linear-gradient(45deg, #B9375D,#E7D3D3, #FE5D26, #D25D5D, #EEEEEE, #0046FF,#FE5D26, #5D688A, #BF092F,#FE5D26);
   color: white;
   background-size: 400%;
-  animation: gradientAnimation 10s ease-in-out infinite;
-  
+  animation: gradientAnimation 10s ease-in-out infinite; 
 }
 
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-
 }
 
 /* Tillgänglighet: respektera reducerad rörelse */
@@ -60,10 +50,6 @@ html {
     animation: none !important;
   }
 }
-
-
-
-
 
 @keyframes pulse-slow {
   0%, 100% { transform: scale(1) translate(0, 0); }

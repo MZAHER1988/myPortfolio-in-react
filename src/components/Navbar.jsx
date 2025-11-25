@@ -1,43 +1,36 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
-
 export default function Navbar() {
-  {
-    /** Language Dropdown */
-  }
-  const { t, i18n } = useTranslation();
-  const [isLangOpen, setIsLangOpen] = useState(false);
-  //const [isLangOpenMobile, setIsLangOpenMobile] = useState(false);
+  const { t, i18n } = useTranslation(); // t-funktion för att hämta text från översättningsfiler, i18n för att hantera språk
+  const [isLangOpen, setIsLangOpen] = useState(false); // State för att hantera om språk-dropdown är öppen eller stängd
+  const [isLangOpenMobile, setIsLangOpenMobile] = useState(false); // State för att hantera om språk-dropdown i mobilmenyn är öppen eller stängd
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false); // State för att hantera om mobilmenyn är öppen eller stängd
 
-
-
+  // Språk som stöds i dropdown-menyn
   const langs = [
-  { code: "en", name: "English", dir: "ltr", flag: "🌐 EN" },
-{ code: "sv", name: "Svenska", dir: "ltr", flag: "🌐 SE" },
-{ code: "ar", name: "العربية", dir: "rtl", flag: "🌐 AR" },
+    { code: "en", name: "English", dir: "ltr", flag: "🌐 EN" },
+    { code: "sv", name: "Svenska", dir: "ltr", flag: "🌐 SE" },
+    { code: "ar", name: "العربية", dir: "rtl", flag: "🌐 AR" },
   ];
 
+  // Hämta det aktuella språket från i18n, för att markera valt språk i dropdown
   const current = (i18n.language || "en").split("-")[0];
   const currentLang = langs.find((l) => l.code === current) || langs[1];
 
-  {
-    /** Change language function */
-  }
+  // Funktion för att byta språk
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    localStorage.setItem("i18nextLng", lng);
-    document.documentElement.lang = lng;
-    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
     setIsLangOpen(false);
     setIsMobileMenuOpen(false);
+    setIsLangOpenMobile(false);
   };
 
   {
     /** Navbar links */
   }
+  // Här definierar vi länkarna som ska visas i navigeringsfältet
   const listNavbar = [
     { name: "nav.home", href: "#home" },
     { name: "nav.skills", href: "#skills" },
@@ -49,6 +42,7 @@ export default function Navbar() {
   {
     /** Hamburger menu links */
   }
+  // Här definierar vi länkarna som ska visas i hamburgermenyn på mobila enheter
   const listHamburgerMenu = [
     { name: "nav.home", href: "#home" },
     { name: "nav.skills", href: "#skills" },
@@ -56,27 +50,37 @@ export default function Navbar() {
     { name: "nav.projects", href: "#projects" },
   ];
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
+  {
+    /**
+    const listHamburgerMenu = listNavbar.filter(
+    (item) => item.name !== "nav.contact"
+  );
+    */
+  }
+  // Funktion för att växla mobilmenyns synlighet
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Funktion för att hantera klick på länkar i mobilmenyn
   const handleLinkClick = (e, href) => {
     e.preventDefault();
     const target = document.querySelector(href);
 
+    // Scrolla smidigt till målelementet med en offset för att undvika att det hamnar under navbaren
     if (target) {
-      const Offset = 85;
+      const Offset = -100;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY + Offset;
 
+      // Smidig scrollning
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });
     }
 
+    // Uppdatera URL utan att ladda om sidan
     window.history.replaceState(null, "", href);
     setIsMobileMenuOpen(false);
   };
@@ -91,7 +95,7 @@ export default function Navbar() {
           href="#home"
           className="flex title-font font-medium items-center text-gray-900"
         >
-          <span className="ml-3 text-orange-500 text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold">
+          <span className="ml-3 text-orange-500 text-xl md:text-2xl lg:text-3xl font-bold">
             M ZAHER HARIRI
           </span>
         </a>
@@ -101,17 +105,19 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="mr-5 hover:text-yellow-300"
+              className="mx-4 text-font font-bold hover:text-orange-500"
             >
               {t(item.name)}
             </a>
           ))}
-          {/** Language Dropdown */}
+        </nav>
 
+        {/** Language Dropdown, desktop */}
+        <div className="hidden sm:flex text-white text-base justify-end items-center">
           <div className="relative">
             <button
               onClick={() => setIsLangOpen((o) => !o)}
-              className="flex items-center gap-2 px-3 py-2 rounded hover:bg-orange-500/20 transition focus:outline-none mx-3"
+              className="flex items-center gap-2 px-3 py-2 rounded hover:bg-orange-500 transition focus:outline-none mx-3"
               aria-haspopup="menu"
               aria-expanded={isLangOpen}
             >
@@ -132,20 +138,21 @@ export default function Navbar() {
               </svg>
             </button>
 
+            {/**Language Dropdown menu when it's open */}
             {isLangOpen && (
               <div
                 role="menu"
-                className="absolute right-0 mt-2 w-40 rounded-md border border-white/10 bg-black/80 backdrop-blur-md shadow-lg"
+                className="absolute end-0 mt-2 w-40 rounded-md border border-white/10 bg-black/80 backdrop-blur-md shadow-lg"
               >
                 {langs.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
                     className={`flex items-center w-full gap-2 px-3 py-2 text-left text-sm hover:bg-orange-500/30 ${
-                      current === lang.code ? "text-yellow-400" : "text-white"
+                      current === lang.code ? "text-orange-400" : "text-white"
                     }`}
                   >
-                    {/* ✅ här visas "EN", "SE", "AR" alltid */}
+                    {/* Here "EN", "SE", "AR" are always displayed */}
                     <span className="px-2 py-0.5 rounded bg-white/10 text-xs font-semibold">
                       {lang.flag || lang.code.toUpperCase()}
                     </span>
@@ -155,13 +162,14 @@ export default function Navbar() {
               </div>
             )}
           </div>
-        </nav>
+        </div>
+
         {/** Mobile Menu*/}
         <div className="rounded-lg backdrop-blur-md sm:hidden">
           <div className="flex items-center justify-end w-full">
             <div className="flex items-center justify-end w-full">
               <button
-                className="focus:outline-none sm:hidden p-2 text-white hover:text-yellow-300"
+                className="focus:outline-none sm:hidden p-2 text-white hover:text-orange-500"
                 onClick={toggleMobileMenu}
               >
                 {isMobileMenuOpen ? (
@@ -177,10 +185,10 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="sm:hidden w-full border border-white/10 mx-auto">
           <ul className="mx-auto max-w-none px-5 py-4 flex flex-col gap-4 backdrop-blur-md shadow-xl">
-            {listHamburgerMenu.map((item, index) => (
-              <li key={index}>
+            {listHamburgerMenu.map((item) => (
+              <li key={item.name}>
                 <a
-                  className="block w-full text-xl font-bold text-gray-400"
+                  className="block w-full text-xl font-bold text-white hover:text-orange-500"
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                 >
@@ -189,25 +197,55 @@ export default function Navbar() {
               </li>
             ))}
 
-                        {/** Language Switcher */}
-            <li className="flex gap-3 pt-4 justify-center text-white m-y-4">
-              {langs.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => changeLanguage(lang.code)}
-                  className={`text-xl font-semibold px-3 py-1 rounded bg-white/10 transition-transform hover:scale-110 ${
-                    current === lang.code
-                      ? "opacity-100"
-                      : "opacity-60 hover:opacity-100"
+            {/** Language Switcher */}
+            {/* Language as a dropdown menu item in mobile */}
+            <li className="text-start">
+              <button
+                onClick={() => setIsLangOpenMobile((v) => !v)}
+                className="w-full text-xl font-bold text-white flex items-center justify-start gap-2 transition-colors"
+                aria-expanded={isLangOpenMobile}
+                aria-controls="mobile-lang-list"
+              >
+                {t("nav.language") || "Language"}
+                <svg
+                  className={`w-4 h-4 transition-transform ${
+                    isLangOpenMobile ? "rotate-180" : ""
                   }`}
-                  title={lang.name}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
                 >
-                  {/* ✅ fallback om flag saknas */}
-                  {lang.flag || lang.code.toUpperCase()}
-                </button>
-              ))}
-            </li>
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
 
+              {isLangOpenMobile && (
+                <ul
+                  id="mobile-lang-list"
+                  className="mt-2 ms-4 flex flex-col items-start gap-2 justify-center"
+                >
+                  {langs.map((lang) => (
+                    <li key={lang.code}>
+                      <button
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`text-base flex items-center gap-2 text-gray-300 transition-colors ${
+                          current === lang.code ? "text-orange-400" : ""
+                        }`}
+                      >
+                        <span className="px-2 py-0.5 rounded bg-white/10 text-xs font-bold">
+                          {lang.flag || lang.code.toUpperCase()}
+                        </span>
+                        {lang.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+            {/* Contact Button */}
             <li className="pt-2">
               <a
                 href="#contact"
@@ -218,7 +256,6 @@ export default function Navbar() {
                 {t("nav.contact")}
               </a>
             </li>
-
           </ul>
         </div>
       )}

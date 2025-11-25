@@ -24,7 +24,7 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'sv', 'ar'],
     load : 'languageOnly',
-    debug: true,
+    debug: process.env.NODE_ENV === 'development',
     ns: ['translation'],
     defaultNS: 'translation',
     backend: {

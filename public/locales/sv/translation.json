@@ -13,7 +13,9 @@
     "about": "Om mig",
     "projects": "Projekt",
     "contact": "Kontakt",
-    "language": "Språk"
+    "language": "Språk",
+    "openMenu": "Öppna meny",
+    "closeMenu": "Stäng meny"
   },
   "skills": {
     "title": "Mina färdigheter",
@@ -60,24 +62,33 @@
     "projects": {
     "title": "Mina projekt",
     "projectOne": {
-      "title": "Projekt Ett",
-      "description": "Beskrivning för projekt ett."
+      "title": "File Manager",
+      "description": "Ett C#-desktopprogram som låter användaren hantera filer och mappar med grundläggande funktioner som skapa, byta namn och ta bort."
     },
     "projectTwo": {
-      "title": "Projekt Två",
-      "description": "Beskrivning för projekt två."
+      "title": "Manager System",
+      "description": "Ett C#-system för lager och försäljning där användaren kan lägga till, uppdatera eller ta bort produkter, hantera en kundvagn och genomföra köp. Lagersaldot uppdateras automatiskt via ett API och POS-systemet sköter betalningsmomentet."
     },
     "projectThree": {
-      "title": "Projekt Tre",
-      "description": "Beskrivning för projekt tre."
+      "title": "Quiz Website",
+      "description": "En webbaserad quiz-sida byggd med ASP.NET MVC (C#), HTML, CSS och SQL Server. Frågor och resultat lagras i en databas, och jag vidareutvecklar sidan med fler funktioner och bättre användarupplevelse."
     },
     "projectFour": {
-      "title": "Projekt Fyra",
-      "description": "Beskrivning för projekt fyra."
+      "title": "Movie website",
+      "description": "En filmsida skapad med HTML, CSS och JavaScript som använder ett API för att söka, bläddra och visa detaljer om filmer. Webbplatsen är responsiv och användarvänlig."
     },
     "projectFive": {
-      "title": "Projekt Fem",
-      "description": "Beskrivning för projekt fem."
+      "title": "Portfolio Website",
+      "description": "En personlig portfolio byggd med React och Tailwind CSS för att visa mina kunskaper, projekt och kontaktinformation i en ren och responsiv design."
+    }
+  },
+  "footer": {
+    "rightsReserved": "© 2025 M ZAHER HARIRI",
+    "contact": {
+      "title": "Kontakta mig",
+      "email": "E-post",
+      "phone": "Telefon",
+      "address": "Adress"
     }
   }
 }

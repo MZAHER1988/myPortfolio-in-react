@@ -5,7 +5,9 @@
     "about": "About Me",
     "projects": "Projects",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "title": "Hi, I'm Zaher",
@@ -60,24 +62,33 @@
     "projects": {
         "title": "My Projects",
         "projectOne": {
-        "title": "Project One",
-        "description": "Description for project one."
+        "title": "File Manager",
+        "description": "A C# desktop app that allows users to manage files and folders with basic operations like create, rename, and delete."
         },
         "projectTwo": {
-        "title": "Project Two",
-        "description": "Description for project two."
+        "title": "Manager System",
+        "description": "A C# inventory and sales system where users can add, update, or remove products, manage a shopping cart, and complete purchases. Stock levels update automatically through an API, and the POS handles checkout operations."
         },
         "projectThree": {
-        "title": "Project Three",
-        "description": "Description for project three."
+        "title": "Quiz Website",
+        "description": "A web-based quiz application built with ASP.NET MVC (C#), HTML, CSS and SQL Server. It uses a database to store questions and results, and I am continuing to develop it by adding new features and improving the user experience."
         },
         "projectFour": {
-        "title": "Project Four",
-        "description": "Description for project four."
+        "title": "Movie website",
+        "description": "Using HTML, CSS and JavaScript with API to create a movie website that allows users to browse and search for movies and view details. The site is designed to be responsive and user-friendly, providing an engaging experience across all devices."
         },
         "projectFive": {
-        "title": "Project Five",
-        "description": "Description for project five."
+        "title": "Portfolio Website",
+        "description": "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects and contact information in a clean and responsive layout."
         }
+    },
+  "footer": {
+    "rightsReserved": "© 2025 M ZAHER HARIRI",
+    "contact": {
+      "title": "Contact Me",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
     }
+  }
 }
