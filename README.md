@@ -29,27 +29,27 @@ It showcases my skills, projects and education, and includes a contact form so p
 ## Project Structure (short overview)
 
 src/
-  App.jsx _ main layout
-  main.jsx _ React + i18n entry
-  i18n.jsx _ i18next configuration
-  components/ _ Navbar, Hero, Skills, About, Projects, Contact, Footer
-  assets/ _ images and icons
+ - App.jsx _ main layout
+ - main.jsx _ React + i18n entry
+ - i18n.jsx _ i18next configuration
+ - components/ _ Navbar, Hero, Skills, About, Projects, Contact, Footer
+ - assets/ _ images and icons
 
 public/
- locales/{en,sv,ar}/translation.json — i18n translation resources
+- locales/{en,sv,ar}/translation.json — i18n translation resources
 
 ---
 
 ## Getting started
 
- # Clone the repo
+ ### Clone the repo
 git clone https://github.com/MZAHER1988/myPortfolio-in-react.git
 cd myPortfolio-in-react
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Start the dev server (Vite):
+### Start the dev server (Vite):
 npm run dev
 
 Then open http://localhost:5173 in your browser to preview.
