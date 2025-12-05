@@ -2,14 +2,6 @@ import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
-  // Same links as in navbar – translated via i18n keys 
-  const listNavbar = [
-    { name: "nav.home", href: "#home" },
-    { name: "nav.skills", href: "#skills" },
-    { name: "nav.about", href: "#about" },
-    { name: "nav.projects", href: "#projects" },
-    { name: "nav.contact", href: "#contact" },
-  ];
 
   return (
     <footer className="text-gray-600 body-font bottom-0 inset-x-0 z-50 bg-black/30 backdrop-blur-sm rounded-lg shadow mt-12 items-center justify-center space-y-4 md:space-y-0 md:flex md:justify-between md:items-center">
