@@ -53,7 +53,7 @@ export default function Projects() {
       title: t("projects.projectFive.title"),
       description: t("projects.projectFive.description"),
       tech: ["React", "i18next", "Tailwind CSS"],
-      github: "https://github.com/MZAHER1988/myPortfolio-in-react",
+      github: "https://github.com/MZAHER1988/zaher-portfolio",
     },
   ];
   {

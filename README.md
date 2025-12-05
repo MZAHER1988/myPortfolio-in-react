@@ -43,8 +43,8 @@ public/
 ## Getting started
 
  ### Clone the repo
-git clone https://github.com/MZAHER1988/myPortfolio-in-react.git
-cd myPortfolio-in-react
+git clone https://github.com/MZAHER1988/zaher-portfolio.git
+cd zaher-portfolio
 
 ### Install dependencies
 npm install
