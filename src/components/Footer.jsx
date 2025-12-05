@@ -12,7 +12,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-700 rounded-lg shadow mt-12 items-center justify-center space-y-4 md:space-y-0 md:flex md:justify-between md:items-center">
+    <footer className="text-gray-600 body-font bottom-0 inset-x-0 z-50 bg-black/30 backdrop-blur-sm rounded-lg shadow mt-12 items-center justify-center space-y-4 md:space-y-0 md:flex md:justify-between md:items-center">
       <div className="w-full max-w-screen-xl mx-auto px-4 py-6 md:flex md:items-center md:justify-between">
         <span className="block text-xl font-bold py-3 text-center items-center justify-center md:py-0">
           <a
@@ -22,20 +22,7 @@ export default function Footer() {
             M ZAHER HARIRI
           </a>
         </span>
-        <nav className="mt-4 md:mt-0">
-          <ul className="flex flex-wrap items-center mt-1 text-xl font-medium sm:mt-0 justify-center">
-            {listNavbar.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="text-gray-200 hover:text-orange-600 mx-4 md:me-6 "
-                >
-                  {t(item.name)}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        
         <div className="py-8 text-center items-center justify-center md:py-0">
           <p dir="auto" className="text-gray-200 items-center justify-center">
             {t("footer.rightsReserved")}

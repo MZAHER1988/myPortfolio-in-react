@@ -7,9 +7,48 @@ import image3 from "../assets/quiz-1.png";
 import image4 from "../assets/Movieflix_1.png";
 import image5 from "../assets/Portfolio_1.png";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 export default function Projects() {
   const { t } = useTranslation();
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  // handle responsive slidesToShow based on window width
+  useEffect(() => {
+    const updateSlidesToShow = () => {
+      const width = window.innerWidth;
+
+      if (width < 640) {
+        // mobile
+        setSlidesToShow(1);
+      } else if (width < 1024) {
+        // tablet / smaller laptop
+        setSlidesToShow(2);
+      } else {
+        // desktop
+        setSlidesToShow(3);
+      }
+    };
+
+    updateSlidesToShow(); // run immediately on first render
+    window.addEventListener("resize", updateSlidesToShow);
+
+    return () => window.removeEventListener("resize", updateSlidesToShow);
+  }, []);
+
+  {
+    /* Slider settings  */
+  }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow, // dynamic based on state
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
 
   {
     /* listProjects data */
@@ -56,50 +95,11 @@ export default function Projects() {
       github: "https://github.com/MZAHER1988/zaher-portfolio",
     },
   ];
-  {
-    /* Slider settings  */
-  }
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    responsive: [
-      {
-        breakpoint: 1024, // for desktop
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600, // for tablets
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480, // for mobile devices
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <section
       id="projects"
-      className="relative overflow-hidden text-white body-font flex flex-col"
+      className="relative overflow-hidden text-white body-font flex flex-col scroll-mt-20"
       data-aos="fade-up"
       data-aos-delay="400"
     >
@@ -109,8 +109,8 @@ export default function Projects() {
         </h2>
         <Slider {...settings}>
           {listProjects.map((project) => (
-            <div key={project.id} className="p-4">
-              <div className="flex flex-col h-full min-h-[550px] border-2 border-orange-500 shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
+            <div key={project.id} className="p-6 md:w-full">
+              <div className="flex flex-col h-full w-full min-h-[500px] border-2 border-orange-500 shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
                 <img
                   src={project.image}
                   alt={project.title}

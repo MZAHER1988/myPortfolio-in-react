@@ -21,7 +21,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden text-white body-font flex flex-col"
+      className="relative overflow-hidden text-white body-font flex flex-col scroll-mt-20"
     >
       <h1
         data-aos="fade-right"

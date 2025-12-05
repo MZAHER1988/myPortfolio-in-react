@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden text-gray-600 body-font flex flex-col"
+      className="relative overflow-hidden text-gray-600 body-font flex flex-col scroll-mt-20"
       data-aos="fade-up"
       data-aos-delay="400"
     >

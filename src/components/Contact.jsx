@@ -61,7 +61,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-20 overflow-hidden"
+      className="relative py-20 overflow-hidden scroll-mt-20"
       data-aos="fade-up"
       data-aos-delay="400"
     >
@@ -69,7 +69,7 @@ export default function Contact() {
         <h2 className="text-4xl font-extrabold text-center mb-12 text-orange-600">
           {t("contact.title")}
         </h2>
-        <p className="mb-12 text-center text-white text-lg">
+        <p className="mb-12 text-center text-white text-lg p-4">
           {t("contact.description")}
         </p>
         {/* Contact Form */}

@@ -77,7 +77,7 @@ export default function Navbar() {
   return (
     <header
       data-aos="fade-up"
-      className="text-gray-600 body-font fixed top-0 inset-x-0 z-50 bg-black/30 backdrop-blur-sm "
+      className="text-gray-600 body-font fixed top-0 inset-x-0 z-50 bg-black/30 backdrop-blur-sm"
     >
       <div className="container mx-auto flex flex-row p-5 items-center justify-between w-full">
         <a
