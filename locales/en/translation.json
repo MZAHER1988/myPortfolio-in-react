@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "title": "Hi, I'm Zaher",
+    "description": "A passionate web developer focused on building responsive, user-friendly, and modern websites. I love learning new technologies and turning creative ideas into reality through code. Always learning. Always improving.",
+    "downloadCv": "Download CV",
+    "linkedinAlt": "My LinkedIn profile",
+    "githubAlt": "My GitHub profile",
+    "photoAlt": "My photo"
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "I have experience working with various programming languages and technologies across both front-end and back-end development. I build web applications using <i>JavaScript</i>, <i>C#</i>, <i><i>HTML</i></i>, <i>CSS</i>, <i>Java</i>, <i>PHP</i>, <i>Python</i>, and <i><i>SQL/MySQL</i></i>, and develop dynamic solutions with <i>Node.js</i> and <i>React</i>.<br/><br/>I also work with <i>WordPress</i> to create content-driven websites, use <i>Git</i> for version control, and apply <i>Tailwind CSS</i> to build modern and responsive interfaces. I’m continuously developing my skills through new projects and hands-on learning."
+  },
+  "about": {
+    "title": "About Me",
+    "title2": "2022 - 2025  From Student to Developer.",
+    "description": "I'm a motivated and curious Web Developer and graduate from Karlstad University, with a strong passion for creating clean, responsive, and user-friendly websites. With experience in languages and frameworks such as C#, Java, PHP, Node.js, SQL, JavaScript, and React, I am adaptable and always eager to expand my skill set. I enjoy learning new technologies and improving my skills in both front-end and back-end development. My goal is to grow as a developer, become a full-stack developer, contribute to projects that make a difference, and continue learning every day to build better digital experiences.<br/><br/><strong> <i> Currently, I’m focusing on: </i>  </strong> <br/><br/>- Web Development: Building responsive and interactive websites using HTML, CSS, JavaScript, React, and Tailwind CSS.<br/><br/>  - App Development: Creating small desktop and mobile applications using C# and Java.<br/><br/>- Continuous Learning: Exploring new tools and frameworks to improve my coding skills and problem-solving mindset.<br/><br/>- Creative Projects: Working on personal projects that help me apply what I learn and develop my creativity.<br/><br/>",
+    "img_aboutAlt": "About me image"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "I'm excited to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to reach out using the form below. I'll do my best to get back to you as soon as possible.",
+    "fields": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "Your Name"
+      },
+      "email": {
+        "label": "Your Email",
+        "placeholder": "youremail@example.com"
+      },
+      "message": {
+        "label": "Your Message",
+        "placeholder": "Write your message here..."
+      }
+    },
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "orEmail": "or email me at",
+    "emailAddress": "zaher.fm39@gmail.com"
+  },
+  "alert": {
+    "successTitle": "Success!",
+    "successText": "Your message has been sent.",
+    "successFooter": "I will get back to you as soon as possible. Thank you!",
+    "errorTitle": "Error!",
+    "errorText": "An error occurred while sending your message.",
+    "errorFooter": "Please try again later or use the email link below the form to contact me directly.",
+    "networkTitle": "Network Error!",
+    "networkText": "Something went wrong while sending. Please check your connection or try again later.",
+    "networkFooter": "If the problem persists, use the email link below the form to contact me directly."
+  },
+    "projects": {
+        "title": "My Projects",
+        "projectOne": {
+        "title": "File Manager",
+        "description": "A C# desktop app that allows users to manage files and folders with basic operations like create, rename, and delete."
+        },
+        "projectTwo": {
+        "title": "Manager System",
+        "description": "A C# inventory and sales system where users can add, update, or remove products, manage a shopping cart, and complete purchases. Stock levels update automatically through an API, and the POS handles checkout operations."
+        },
+        "projectThree": {
+        "title": "Quiz Website",
+        "description": "A web-based quiz application built with ASP.NET MVC (C#), HTML, CSS and SQL Server. It uses a database to store questions and results, and I am continuing to develop it by adding new features and improving the user experience."
+        },
+        "projectFour": {
+        "title": "Movie website",
+        "description": "Using HTML, CSS and JavaScript with API to create a movie website that allows users to browse and search for movies and view details. The site is designed to be responsive and user-friendly, providing an engaging experience across all devices."
+        },
+        "projectFive": {
+        "title": "Portfolio Website",
+        "description": "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects and contact information in a clean and responsive layout."
+        }
+    },
+  "footer": {
+    "rightsReserved": "© 2025 M ZAHER HARIRI",
+    "contact": {
+      "title": "Contact Me",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  }
+}

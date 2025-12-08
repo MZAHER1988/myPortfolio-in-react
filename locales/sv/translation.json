@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Hej, jag är Zaher",
+    "description": "En passionerad webbutvecklare som fokuserar på att bygga responsiva,användarvänliga och moderna webbplatser. Jag älskar att lära mig nya teknologier och förvandla kreativa idéer till verklighet genom kod. Alltid lärande. Alltid bättre.",
+    "downloadCv": "Ladda ner CV",
+    "linkedinAlt": "Min LinkedIn-profil",
+    "githubAlt": "Min GitHub-profil",
+    "photoAlt": "Min bild"
+  },
+  "nav": {
+    "home": "Hem",
+    "skills": "Färdigheter",
+    "about": "Om mig",
+    "projects": "Projekt",
+    "contact": "Kontakt",
+    "language": "Språk",
+    "openMenu": "Öppna meny",
+    "closeMenu": "Stäng meny"
+  },
+  "skills": {
+    "title": "Mina färdigheter",
+    "description": "Jag har erfarenhet av olika programmeringsspråk och teknologier inom både front-end och back-end utveckling. Jag bygger webbapplikationer med <i>JavaScript</i>, <i>C#</i>, <i>HTML</i>, <i>CSS</i>, <i>Java</i>, <i>PHP</i>, <i>Python</i> och <i>SQL/MySQL</i>, och utvecklar dynamiska lösningar med <i>Node.js</i> och <i>React</i>.<br/><br/>Jag arbetar också med <i>WordPress</i> för innehållsdrivna webbplatser, använder <i>Git</i> för versionshantering, och tillämpar <i>Tailwind CSS</i> för att bygga moderna och responsiva gränssnitt. Jag utvecklar kontinuerligt mina färdigheter genom nya projekt och praktisk erfarenhet."
+  },
+  "about": {
+    "title": "Om mig",
+    "title2": "2022 - 2025 Från student till utvecklare.",
+    "description": "Jag är en motiverad och nyfiken webbutvecklare och examen från Karlstads universitet, med en stark passion för att skapa rena, responsiva och användarvänliga webbplatser. Med erfarenhet av språk och ramverk som C#, Java, PHP, Node.js, SQL, JavaScript och React är jag anpassningsbar och alltid ivrig att utöka min kompetens. Jag tycker om att lära mig nya teknologier och förbättra mina färdigheter inom både front-end och back-end utveckling. Mitt mål är att växa som utvecklare, bli en fullstack-utvecklare, bidra till projekt som gör skillnad, och fortsätta lära mig varje dag för att bygga bättre digitala upplevelser.<br/><br/><strong> <i> Just nu fokuserar jag på: </i>  </strong> <br/><br/>- Webb utveckling: Bygga responsiva och interaktiva webbplatser med HTML, CSS, JavaScript, React och Tailwind CSS.<br/><br/>  - App utveckling: Skapa små skrivbords- och mobilapplikationer med C# och Java.<br/><br/>- Kontinuerligt lärande: Utforska nya verktyg och ramverk för att förbättra mina kodningsfärdigheter och problemlösningsförmåga.<br/><br/>- Kreativa projekt: Arbeta med personliga projekt som hjälper mig att tillämpa det jag lär mig och utveckla min kreativitet.<br/><br/>",
+    "img_aboutAlt": "Bild om mig"
+  },
+  "contact": {
+    "title": "Kontakta mig",
+    "description": "Jag ser fram emot att höra från dig! Oavsett om du har en fråga, en projektidé eller bara vill säga hej, tveka inte att kontakta mig via formuläret nedan. Jag kommer att göra mitt bästa för att återkomma till dig så snart som möjligt.",
+    "fields": {
+      "name": {
+        "label": "Ditt namn",
+        "placeholder": "Ditt namn"
+      },
+      "email": {
+        "label": "Din e-post",
+        "placeholder": "youremail@example.com"
+      },
+      "message": {
+        "label": "Ditt meddelande",
+        "placeholder": "Skriv ditt meddelande här..."
+      }
+    },
+    "sendButton": "Skicka meddelande",
+    "sending": "Skickar...",
+    "orEmail": "eller mejla mig på",
+    "emailAddress": "zaher.fm39@gmail.com"
+  },
+  "alert": {
+    "successTitle": "Framgång!",
+    "successText": "Ditt meddelande har skickats.",
+    "successFooter": "Jag återkommer till dig så snart som möjligt. Tack!",
+    "errorTitle": "Fel!",
+    "errorText": "Ett fel uppstod när ditt meddelande skickades.",
+    "errorFooter": "Vänligen försök igen senare eller använd e-postlänken nedanför formuläret för att kontakta mig direkt.",
+    "networkTitle": "Nätverksfel!",
+    "networkText": "Något gick fel vid sändningen. Kontrollera din anslutning eller försök igen senare.",
+    "networkFooter": "Om problemet kvarstår, vänligen använd e-postlänken nedanför formuläret för att kontakta mig direkt."
+  },
+    "projects": {
+    "title": "Mina projekt",
+    "projectOne": {
+      "title": "File Manager",
+      "description": "Ett C#-desktopprogram som låter användaren hantera filer och mappar med grundläggande funktioner som skapa, byta namn och ta bort."
+    },
+    "projectTwo": {
+      "title": "Manager System",
+      "description": "Ett C#-system för lager och försäljning där användaren kan lägga till, uppdatera eller ta bort produkter, hantera en kundvagn och genomföra köp. Lagersaldot uppdateras automatiskt via ett API och POS-systemet sköter betalningsmomentet."
+    },
+    "projectThree": {
+      "title": "Quiz Website",
+      "description": "En webbaserad quiz-sida byggd med ASP.NET MVC (C#), HTML, CSS och SQL Server. Frågor och resultat lagras i en databas, och jag vidareutvecklar sidan med fler funktioner och bättre användarupplevelse."
+    },
+    "projectFour": {
+      "title": "Movie website",
+      "description": "En filmsida skapad med HTML, CSS och JavaScript som använder ett API för att söka, bläddra och visa detaljer om filmer. Webbplatsen är responsiv och användarvänlig."
+    },
+    "projectFive": {
+      "title": "Portfolio Website",
+      "description": "En personlig portfolio byggd med React och Tailwind CSS för att visa mina kunskaper, projekt och kontaktinformation i en ren och responsiv design."
+    }
+  },
+  "footer": {
+    "rightsReserved": "© 2025 M ZAHER HARIRI",
+    "contact": {
+      "title": "Kontakta mig",
+      "email": "E-post",
+      "phone": "Telefon",
+      "address": "Adress"
+    }
+  }
+}
