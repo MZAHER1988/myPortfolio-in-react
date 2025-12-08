@@ -27,7 +27,7 @@ i18n
     ns: ["translation"],
     defaultNS: "translation",
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: '/zaher-portfolio/locales/{{lng}}/{{ns}}.json',
     },
     detection: {
       // order and from where user language should be detected
